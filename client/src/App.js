@@ -1,20 +1,21 @@
 import * as React from 'react';
 import {useState} from 'react';
-import ReactMapGL from 'react-map-gl';
+import Map from 'react-map-gl';
 
 function App() {
-  const [viewport, setViewport] = useState({
-    width: 400,
-    height:400,
-    latitude: 37.7577,
-    longitude: -122.4376,
-    zoom:8
-  });
-  return (
-    <div className="App">
-      
+  <div className="App">
+    return (
+    <Map
+      initialViewState={{
+        longitude: -122.4,
+        latitude: 37.8,
+        zoom: 14
+      }}
+      style={{width: 600, height: 400}}
+      mapStyle="mapbox://styles/mapbox/streets-v9"
+      /> 
     </div>
-  );
+  
 }
 
 export default App;
